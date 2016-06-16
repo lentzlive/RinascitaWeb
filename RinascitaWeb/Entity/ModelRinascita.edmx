@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'appwebesql-group-db.dbo.TB_users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TB_users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="250" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Surname" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="Email" Type="varchar" MaxLength="250" />
+          <Property Name="GroupLevel" Type="varchar" MaxLength="20" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="DT_INS" Type="datetime" />
+          <Property Name="DT_UPD" Type="datetime" />
+          <Property Name="note" Type="varchar" MaxLength="500" />
+          <Property Name="mobile" Type="varchar" MaxLength="50" />
+          <Property Name="phone" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="TB_users" EntityType="Self.TB_users" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TB_users].[Id] AS [Id], 
+[TB_users].[Username] AS [Username], 
+[TB_users].[Password] AS [Password], 
+[TB_users].[Name] AS [Name], 
+[TB_users].[Surname] AS [Surname], 
+[TB_users].[Address] AS [Address], 
+[TB_users].[Email] AS [Email], 
+[TB_users].[GroupLevel] AS [GroupLevel], 
+[TB_users].[LastLogin] AS [LastLogin], 
+[TB_users].[DT_INS] AS [DT_INS], 
+[TB_users].[DT_UPD] AS [DT_UPD], 
+[TB_users].[note] AS [note], 
+[TB_users].[mobile] AS [mobile], 
+[TB_users].[phone] AS [phone]
+FROM [dbo].[TB_users] AS [TB_users]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TB_users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="GroupLevel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LastLogin" Type="DateTime" Precision="3" />
+          <Property Name="DT_INS" Type="DateTime" Precision="3" />
+          <Property Name="DT_UPD" Type="DateTime" Precision="3" />
+          <Property Name="note" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="EntitiesRinascita" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_users" EntityType="Self.TB_users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesRinascita">
+          <EntitySetMapping Name="TB_users">
+            <EntityTypeMapping TypeName="Model.TB_users">
+              <MappingFragment StoreEntitySet="TB_users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="GroupLevel" ColumnName="GroupLevel" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="DT_INS" ColumnName="DT_INS" />
+                <ScalarProperty Name="DT_UPD" ColumnName="DT_UPD" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30A9AFDF-2AD7-465B-801B-01F0C6A7399A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RinascitaWeb</RootNamespace>
+    <AssemblyName>RinascitaWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\sharedDll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\style-responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\table-responsive.css" />
+    <Content Include="assets\css\to-do.css" />
+    <Content Include="assets\css\zabuto_calendar.css" />
+    <Content Include="assets\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\img\Background-Vector.jpg" />
+    <Content Include="assets\img\blog-bg.jpg" />
+    <Content Include="assets\img\checkbox-gray.png" />
+    <Content Include="assets\img\instagram.jpg" />
+    <Content Include="assets\img\login-bg.jpg" />
+    <Content Include="assets\img\lorde.jpg" />
+    <Content Include="assets\img\mask.png" />
+    <Content Include="assets\img\ny.jpg" />
+    <Content Include="assets\img\product.jpg" />
+    <Content Include="assets\img\product.png" />
+    <Content Include="assets\img\profile-01.jpg" />
+    <Content Include="assets\img\profile-02.jpg" />
+    <Content Include="assets\img\radio-gray.png" />
+    <Content Include="assets\img\ui-danro.jpg" />
+    <Content Include="assets\img\ui-divya.jpg" />
+    <Content Include="assets\img\ui-sam.jpg" />
+    <Content Include="assets\img\ui-sherman.jpg" />
+    <Content Include="assets\img\ui-zac.jpg" />
+    <Content Include="assets\img\weather.jpg" />
+    <Content Include="assets\img\website-backgrounds-hd-arena.jpg" />
+    <Content Include="assets\img\zoom.png" />
+    <Content Include="assets\js\advanced-form-components.js" />
+    <Content Include="assets\js\bootstrap-switch.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\calendar-conf-events.js" />
+    <Content Include="assets\js\chartjs-conf.js" />
+    <Content Include="assets\js\common-scripts.js" />
+    <Content Include="assets\js\easy-pie-chart.js" />
+    <Content Include="assets\js\flotchart-conf.js" />
+    <Content Include="assets\js\form-component.js" />
+    <Content Include="assets\js\form-validation-script.js" />
+    <Content Include="assets\js\gritter-conf.js" />
+    <Content Include="assets\js\jquery-1.8.3.min.js" />
+    <Content Include="assets\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="assets\js\jquery.backstretch.min.js" />
+    <Content Include="assets\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.nicescroll.js" />
+    <Content Include="assets\js\jquery.scrollTo.min.js" />
+    <Content Include="assets\js\jquery.sparkline.js" />
+    <Content Include="assets\js\jquery.tagsinput.js" />
+    <Content Include="assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="assets\js\morris-conf.js" />
+    <Content Include="assets\js\sparkline-chart.js" />
+    <Content Include="assets\js\tasks.js" />
+    <Content Include="assets\js\zabuto_calendar.js" />
+    <Content Include="assets\lineicons\fonts\linecons.svg" />
+    <Content Include="assets\lineicons\index.html" />
+    <Content Include="assets\lineicons\lte-ie7.js" />
+    <Content Include="assets\lineicons\style.css" />
+    <Content Include="AutError.aspx" />
+    <Content Include="Entity\ModelRinascita.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelRinascita.edmx</DependentUpon>
+      <LastGenOutput>ModelRinascita.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entity\ModelRinascita.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelRinascita.edmx</DependentUpon>
+      <LastGenOutput>ModelRinascita.cs</LastGenOutput>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutError.aspx.cs">
+      <DependentUpon>AutError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutError.aspx.designer.cs">
+      <DependentUpon>AutError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BE\dataHelper.cs" />
+    <Compile Include="Common.Master.cs">
+      <DependentUpon>Common.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common.Master.designer.cs">
+      <DependentUpon>Common.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ModelRinascita.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRinascita.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ModelRinascita.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRinascita.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ModelRinascita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRinascita.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\TB_users.cs">
+      <DependentUpon>ModelRinascita.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\RunSP.cs" />
+    <Compile Include="Lib\WebSitePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\img\.DS_Store" />
+    <Content Include="assets\lineicons\fonts\linecons.eot" />
+    <Content Include="assets\lineicons\fonts\linecons.ttf" />
+    <Content Include="assets\lineicons\fonts\linecons.woff" />
+    <Content Include="Common.Master" />
+    <EntityDeploy Include="Entity\ModelRinascita.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelRinascita.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entity\ModelRinascita.edmx.diagram">
+      <DependentUpon>ModelRinascita.edmx</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\js\advanced-datatable\" />
+    <Folder Include="assets\js\bootstrap-datepicker\" />
+    <Folder Include="assets\js\bootstrap-daterangepicker\" />
+    <Folder Include="assets\js\bootstrap-datetimepicker\" />
+    <Folder Include="assets\js\bootstrap-fileupload\" />
+    <Folder Include="assets\js\bootstrap-inputmask\" />
+    <Folder Include="assets\js\bootstrap-timepicker\" />
+    <Folder Include="assets\js\bootstrap-wysihtml5\" />
+    <Folder Include="assets\js\chart-master\" />
+    <Folder Include="assets\js\ckeditor\" />
+    <Folder Include="assets\js\dropzone\" />
+    <Folder Include="assets\js\fancybox\" />
+    <Folder Include="assets\js\file-uploader\" />
+    <Folder Include="assets\js\flot\" />
+    <Folder Include="assets\js\fullcalendar\" />
+    <Folder Include="assets\js\google-maps\" />
+    <Folder Include="assets\js\gritter\" />
+    <Folder Include="assets\js\jquery-easy-pie-chart\" />
+    <Folder Include="assets\js\xchart\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24278</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:24278/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

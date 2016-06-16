@@ -1,0 +1,1378 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MainSecurity</name>
+    </assembly>
+    <members>
+        <member name="F:MainSecurity.MBooking_User.m_Category">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Empl">
+            <summary>
+            Empl
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Surname">
+            <summary>
+            Surname
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_SeniorityYear">
+            <summary>
+            SeniorityYear
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Dt_Birth">
+            <summary>
+            Dt_Birth
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Dt_EndEngage">
+            <summary>
+            Dt_EndEngage
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Dt_BeginEngage">
+            <summary>
+            Dt_BeginEngage
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Age">
+            <summary>
+            Age
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Ds_Group">
+            <summary>
+            Ds_Group
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Id_Company">
+            <summary>
+            id_Company
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Ds_Company">
+            <summary>
+            Ds_Company
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Base">
+            <summary>
+            Base
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Level">
+            <summary>
+            Level
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Profile">
+            <summary>
+            Profile
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_ID_Role">
+            <summary>
+            ID_Role
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Fl_Pensioner">
+            <summary>
+            Fl_Pensioner
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Full_Admin">
+            <summary>
+            Full_Admin
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Read_Admin">
+            <summary>
+            Read_Admin
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Optional">
+            <summary>
+            Read_Admin
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Optional2">
+            <summary>
+            Read_Admin
+            </summary>
+        </member>
+        <member name="F:MainSecurity.MBooking_User.m_Optional3">
+            <summary>
+            Read_Admin
+            </summary>
+        </member>
+        <member name="M:MainSecurity.MBooking_User.#ctor">
+            <summary>
+            Costruttore
+            </summary>
+            <param name="Uid"></param>
+        </member>
+        <member name="M:MainSecurity.MBooking_User.#ctor(System.Int32)">
+            <summary>
+            Costruttore
+            </summary>
+            <param name="Uid"></param>
+        </member>
+        <member name="T:MainSecurity.MainPage">
+            <summary>
+            Classe padre per la gestione delle security
+            </summary>
+        </member>
+        <member name="M:MainSecurity.MainPage.OnInit(System.EventArgs)">
+            <summary>
+            Metodo richiamato all'inizializazzione della pagina
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:MainSecurity.Group">
+            <summary>
+            Rappresenta un entita gruppo
+            </summary>
+        </member>
+        <member name="T:MainSecurity.GenericEntity">
+            <summary>
+            Rappresenta l'entità generica
+            </summary>
+        </member>
+        <member name="P:MainSecurity.GenericEntity.Uid">
+            <summary>
+            Id dell'utente che ha modificato/inserito l'entità
+            </summary>
+        </member>
+        <member name="P:MainSecurity.GenericEntity.Date_Ins">
+            <summary>
+            Data di inserimento dell'entità
+            </summary>
+        </member>
+        <member name="P:MainSecurity.GenericEntity.Date_Upd">
+            <summary>
+            Data di aggiornamento dell'entità
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Group.getUsers">
+            <summary>
+            Restituisce la lista degli utenti appartenenti al gruppo
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Group.getGroups(System.String,System.Int32)">
+            <summary>
+            Restituisce un dataset con la lista dei gruppi
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Group.getAllGroups">
+            <summary>
+            Restituisce un dataset con la lista di tutti i gruppi gruppi
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Group.getGroupsEnable(System.Int32)">
+            <summary>
+            Restituisce un dataset con la lista di tutti i gruppi di cui si è amministratore
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Group.updateGroup(System.Int32,System.String,System.String,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Aggiorna un gruppo
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Group.insertGroup(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            Crea un nuovo gruppo
+            </summary>
+            <param name="Id_Group">Id del gruppo</param>
+            <param name="Name_Group">Nome del gruppo</param>
+            <param name="Ds_Group">Descrizione</param>
+            <param name="uid">Numero di matricola dell'amministratore che ha creato il gruppo</param>
+            <returns>Numero di righe modificate sul db</returns>
+        </member>
+        <member name="M:MainSecurity.Group.deleteGroup(System.Int32)">
+            <summary>
+            Elimina un gruppo
+            </summary>
+            <param name="Id_Group">Id del gruppo da eliminare</param>
+        </member>
+        <member name="M:MainSecurity.Group.getGroupsForUser(System.Int32)">
+            <summary>
+            Restituisce la lista dei gruppi a cui appartiene un utente
+            </summary>
+        </member>
+        <member name="P:MainSecurity.Group.Name">
+            <summary>
+            Nome del gruppo
+            </summary>
+        </member>
+        <member name="P:MainSecurity.Group.Description">
+            <summary>
+            Descrizione del gruppo
+            </summary>
+        </member>
+        <member name="P:MainSecurity.Group.Id">
+            <summary>
+            Id del gruppo
+            </summary>
+        </member>
+        <member name="T:MainSecurity.Util">
+            <summary>
+            Classe di utilità per la gestione delle security
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Util.getUserByName(System.String)">
+            <summary>
+            Dato un nome utente restituisce l'oggetto user ad esso associato
+            </summary>
+            <param name="name">Nome utente</param>
+            <returns>Oggetto utente</returns>
+        </member>
+        <member name="M:MainSecurity.Util.getPassword(System.String)">
+            <summary>
+            Dato un nome utente restituisce l'oggetto user ad esso associato
+            </summary>
+            <param name="name">Nome utente</param>
+            <returns>Oggetto utente</returns>
+        </member>
+        <member name="M:MainSecurity.Util.getMyAdmins(System.Int32)">
+            <summary>
+            Dato un nome utente restituisce l'oggetto user ad esso associato
+            </summary>
+            <param name="name">Nome utente</param>
+            <returns>Oggetto utente</returns>
+        </member>
+        <member name="M:MainSecurity.Util.getErrors(System.Exception)">
+            <summary>
+            Metodo da implementare per la gestione degli errori
+            </summary>
+            <param name="ex">Eccezione</param>
+        </member>
+        <member name="P:TreeView_ajax_Main.DisplayTree">
+            <summary>
+            Tree to display in the control
+            </summary>
+        </member>
+        <member name="P:TreeView_ajax_Main.Nodes">
+            <summary>
+            Nodi
+            </summary>
+        </member>
+        <member name="P:TreeView_ajax_Main.DelayLoad">
+            <summary>
+            Set delay load if the output of the tree should be 
+            staged using AJAX techniques.
+            </summary>
+        </member>
+        <member name="T:MainSecurity.SecurityService.Service">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.Select(System.String,System.Int32,System.String,MainSecurity.SecurityService.OdbcParameter[])">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.SelectAsync(System.String,System.Int32,System.String,MainSecurity.SecurityService.OdbcParameter[])">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.SelectAsync(System.String,System.Int32,System.String,MainSecurity.SecurityService.OdbcParameter[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.Update(System.String,System.Int32,System.String,MainSecurity.SecurityService.OdbcParameter[])">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.UpdateAsync(System.String,System.Int32,System.String,MainSecurity.SecurityService.OdbcParameter[])">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.UpdateAsync(System.String,System.Int32,System.String,MainSecurity.SecurityService.OdbcParameter[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.UpdateLeafPermissions(System.String,System.Int32,System.Int32,System.Int32[],System.Boolean[],System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.UpdateLeafPermissionsAsync(System.String,System.Int32,System.Int32,System.Int32[],System.Boolean[],System.Int32)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.UpdateLeafPermissionsAsync(System.String,System.Int32,System.Int32,System.Int32[],System.Boolean[],System.Int32,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.setAdminsNodesPermissions(System.String,System.Int32,System.Int32,System.Int32[])">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.setAdminsNodesPermissionsAsync(System.String,System.Int32,System.Int32,System.Int32[])">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.setAdminsNodesPermissionsAsync(System.String,System.Int32,System.Int32,System.Int32[],System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.setUsersInGroup(System.String,System.Int32,System.Int32,System.Int32[],System.Int32,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.setUsersInGroupAsync(System.String,System.Int32,System.Int32,System.Int32[],System.Int32,System.Boolean)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.setUsersInGroupAsync(System.String,System.Int32,System.Int32,System.Int32[],System.Int32,System.Boolean,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.sendMail(System.Object[],System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.sendMailAsync(System.Object[],System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.sendMailAsync(System.Object[],System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:MainSecurity.SecurityService.Service.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="E:MainSecurity.SecurityService.Service.SelectCompleted">
+            <remarks/>
+        </member>
+        <member name="E:MainSecurity.SecurityService.Service.UpdateCompleted">
+            <remarks/>
+        </member>
+        <member name="E:MainSecurity.SecurityService.Service.UpdateLeafPermissionsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:MainSecurity.SecurityService.Service.setAdminsNodesPermissionsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:MainSecurity.SecurityService.Service.setUsersInGroupCompleted">
+            <remarks/>
+        </member>
+        <member name="E:MainSecurity.SecurityService.Service.sendMailCompleted">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.OdbcParameter">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.DbParameter">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.MarshalByRefObject">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.DbType">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.Direction">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.IsNullable">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.ParameterName">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.Size">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.SourceColumn">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.SourceColumnNullMapping">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.SourceVersion">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.DbParameter.Value">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.OdbcParameter.OdbcType">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.OdbcParameter.Precision">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.OdbcParameter.Scale">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.OdbcType">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.BigInt">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Binary">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Bit">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Char">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.DateTime">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Decimal">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Numeric">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Double">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Image">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Int">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.NChar">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.NText">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.NVarChar">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Real">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.UniqueIdentifier">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.SmallDateTime">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.SmallInt">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Text">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Timestamp">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.TinyInt">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.VarBinary">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.VarChar">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Date">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.OdbcType.Time">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.DbType">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.AnsiString">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Binary">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Byte">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Boolean">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Currency">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Date">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.DateTime">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Decimal">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Double">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Guid">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Int16">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Int32">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Int64">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Object">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.SByte">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Single">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.String">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Time">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.UInt16">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.UInt32">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.UInt64">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.VarNumeric">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.AnsiStringFixedLength">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.StringFixedLength">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DbType.Xml">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.ParameterDirection">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.ParameterDirection.Input">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.ParameterDirection.Output">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.ParameterDirection.InputOutput">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.ParameterDirection.ReturnValue">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.DataRowVersion">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DataRowVersion.Original">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DataRowVersion.Current">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DataRowVersion.Proposed">
+            <remarks/>
+        </member>
+        <member name="F:MainSecurity.SecurityService.DataRowVersion.Default">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.SelectCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.SelectCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.SelectCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.UpdateCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.UpdateCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.UpdateCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.UpdateLeafPermissionsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.UpdateLeafPermissionsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.UpdateLeafPermissionsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.setAdminsNodesPermissionsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.setAdminsNodesPermissionsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.setAdminsNodesPermissionsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.setUsersInGroupCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.setUsersInGroupCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.setUsersInGroupCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.sendMailCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:MainSecurity.SecurityService.sendMailCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.SecurityService.sendMailCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="P:MainSecurity.Node.Name">
+            <summary>
+            Nome del nodo
+            </summary>
+        </member>
+        <member name="P:MainSecurity.Node.Description">
+            <summary>
+            Descrizione del nodo
+            </summary>
+        </member>
+        <member name="P:MainSecurity.Node.Id">
+            <summary>
+            Id del nodo
+            </summary>
+        </member>
+        <member name="P:MainSecurity.Node.Parent_Id">
+            <summary>
+            Id del nodo padre
+            </summary>
+        </member>
+        <member name="P:MainSecurity.Node.Document">
+            <summary>
+            Riferimento all'applicazione o al documento associato al nodo
+            </summary>
+        </member>
+        <member name="T:MainSecurity.Authorization">
+            <summary>
+            Classe per la gestione delle autorizzazioni
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetNodesForUser(System.String)">
+            <summary>
+            Recupera i nodi dell'albero visibili per un utente
+            </summary>
+            <param name="UserLogin">Username utilizzato dall'utente in fase di autenticazione</param>
+            <returns>Nodi visibili dall'utente</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetEntity(System.Int32)">
+            <summary>
+            Recupera i gruppi a cui l'utente è abilitato
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.SaveNewSessionID(System.String,System.String,System.String)">
+            <summary>
+            contralla se a quell'hostadress è associata quella sessionid
+            </summary>
+            <param name="HostAdress"></param>
+            <param name="SessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.IsNewSessionID(System.String,System.String)">
+            <summary>
+            contralla se a quell'hostadress è associata quella sessionid
+            </summary>
+            <param name="HostAdress"></param>
+            <param name="SessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetCompanyUserNotMeridiana(System.Int32)">
+            <summary>
+            Recupera L'Azienda  Per l'utente non Meridiana
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetLoginUserNotMeridiana(System.Int32)">
+            <summary>
+            Recupera la Login Per l'utente non Meridiana
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetGroupsForUser(System.String)">
+            <summary>
+            Recupera i gruppi a cui l'utente è abilitato
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetNodesForUserDoc(System.String)">
+            <summary>
+            Recupera i nodi dell'albero visibili per un utente
+            </summary>
+            <param name="UserLogin">Username utilizzato dall'utente in fase di autenticazione</param>
+            <returns>Nodi visibili dall'utente</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetNodesForAdmin(System.Collections.SortedList@,System.Int32,System.Boolean)">
+            <summary>
+            Recupera i nodi dell'albero visibili per un amministratore
+            </summary>
+            <param name="Nodes">Nodi visibili dall'amministratore</param>
+            <param name="empl">Numero di matricola</param>
+            <param name="bLeaf">Indica se recuperare o meno gli elementi foglia</param>
+            <returns>L'id nodo massimo presente sul db</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.getTreeNodesForUser(System.String,Tree_ajax)">
+            <summary>
+            Recupera i nodi dell'albero visibili per un utente
+            </summary>
+            <param name="UserLogin">Username utilizzato dall'utente in fase di autenticazione</param>
+            <param name="tree">Controllo su cui inserire i nodi</param>
+        </member>
+        <member name="M:MainSecurity.Authorization.getTreeNodesForUserUSB(System.String,Tree_ajax)">
+            <summary>
+            Recupera i nodi dell'albero visibili per un utente
+            </summary>
+            <param name="UserLogin">Username utilizzato dall'utente in fase di autenticazione</param>
+            <param name="tree">Controllo su cui inserire i nodi</param>
+        </member>
+        <member name="M:MainSecurity.Authorization.getTreeNodesForUserDoc(System.String,Tree_ajax)">
+            <summary>
+            preleva i nodi per popolare la treview
+            </summary>
+            <param name="UserLogin"></param>
+            <param name="tree"></param>
+        </member>
+        <member name="M:MainSecurity.Authorization.getApplicationPriority(System.String)">
+            <summary>
+            Recupera l'applicazione con la priorità più alta
+            </summary>
+            <param name="UserLogin">Username utilizzato dall'utente in fase di autenticazione</param>
+            <param name="tree">Controllo su cui inserire i nodi</param>
+        </member>
+        <member name="M:MainSecurity.Authorization.CheckPassword_Mail(System.String)">
+            <summary>
+            Metodo che controlla la validità della password e la presenza dell'e-mail
+            </summary>
+            <param name="UserLogin"></param>
+            <returns>Bool</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.Admin_Email(System.Int32)">
+            <summary>
+            in base al numero di matricola verifico se appartiene al gruppop di amministrazione e-mail
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.User_Email(System.Int32)">
+            <summary>
+            in base al numero di matricola verifico se appartiene al gruppo e-mail
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.Get_Email_Password(System.Int32)">
+            <summary>
+            in base al numero di matricola verifico se appartiene al gruppo e-mail
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetGroupIDElio(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.GetGroupsID(System.Int32)">
+            <summary>
+            restituisce l'elenco di di id_group di appartenenza
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.LogDocOpen(System.String,System.String,System.String)">
+            <summary>
+            restituisce l'elenco di di id_group di appartenenza
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.UpdateLastAccess(System.String)">
+            <summary>
+            Aggiorno il campo di ultimo accesso
+            </summary>
+            <param name="UserLogin"></param>
+            <returns>Bool</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.getTreeNodeForAdmin(TreeView_ajax_Main,MainSecurity.User,System.Boolean)">
+            <summary>
+            Restituisce l'albero visibile ad un amministratore
+            </summary>
+            <param name="tree">Albero</param>
+            <param name="user">Amministratore</param>
+            <param name="bLeaf">Indica se recuperare gli elementi foglia</param>
+            <returns>Id nodo massimo presente sul database</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.getMenuNodeForUser(System.String,System.String,System.Web.UI.WebControls.Menu)">
+            <summary>
+            Recupera i nodi del menu visibili per un utente
+            </summary>
+            <param name="UserLogin">Username utilizzato dall'utente in fase di autenticazione</param>
+            <param name="menu">Controllo su cui inserire i nodi</param>
+        </member>
+        <member name="M:MainSecurity.Authorization.getGroupList(System.Int32)">
+            <summary>
+            Recuper i gruppi a cui un utente appartiene
+            </summary>
+            <param name="Empl">Numero di matricola dell'utente</param>
+            <returns>Lista dei gruppi a cui appartiene l'utente</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.UpdatePassword(System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Update della password
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.getEmail_ChangePassword(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Update della password
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.RestorePassword(System.Int32,System.String,System.String)">
+            <summary>
+            Metodo per il recupero Password
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authorization.getNodesFromHastable(System.Collections.SortedList)">
+            <summary>
+            Dato un Hashtable restituisce la TreeNodeCollection con la stessa struttura e gli stessi elementi
+            </summary>
+            <param name="hash">Struttura dati di partenza</param>
+            <returns>Struttura dati ricavata</returns>
+        </member>
+        <member name="M:MainSecurity.Authorization.getMenuFromHastable(System.Collections.SortedList)">
+            <summary>
+            Dato un Hashtable restituisce la TreeNodeCollection con la stessa struttura e gli stessi elementi
+            </summary>
+            <param name="hash">Struttura dati di partenza</param>
+            <returns>Struttura dati ricavata</returns>
+        </member>
+        <member name="T:MainSecurity.Authentication">
+            <summary>
+            Classe utilizzata per l'autenticazione
+            </summary>
+        </member>
+        <member name="M:MainSecurity.Authentication.ValidateUser(System.String,System.String,System.String,System.Boolean,System.Int32@)">
+            <summary>
+            Autentica l'utente
+            </summary>
+            <param name="Login">Username di autenticazione</param>
+            <param name="Password">Password di autenticazione</param>
+            <returns>True se l'utente è stato validato</returns>
+            <param name="WebService">Url del servizio web utilizzato per l'accesso al db</param>
+        </member>
+        <member name="T:Tree_ajax">
+            <summary>
+            Container for the tree at runtime.
+            </summary>
+        </member>
+        <member name="M:Tree_ajax.#ctor(System.String)">
+            <summary>
+            Constructor of the tree
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:Tree_ajax.ID">
+            <summary>
+            The id to store the tree against in the session
+            </summary>
+        </member>
+        <member name="P:Tree_ajax.Root">
+            <summary>
+            The root node of the tree
+            </summary>
+        </member>
+        <member name="T:TreeNode">
+            <summary>
+            A node in the tree
+            </summary>
+        </member>
+        <member name="F:TreeNode.openmode">
+            <summary>
+            Open Mode of Page
+            </summary>
+        </member>
+        <member name="M:TreeNode.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for a treenode
+            </summary>
+            <param name="text">text to show</param>
+            <param name="url">url to link to</param>
+            <param name="imageIndexClosed">image to use</param>
+        </member>
+        <member name="M:TreeNode.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor for a treenode
+            </summary>
+            <param name="text">text to show</param>
+            <param name="url">url to link to</param>
+            <param name="imageIndexClosed">image to use</param>
+        </member>
+        <member name="M:TreeNode.WriteNode(System.Web.UI.HtmlTextWriter,System.String,System.Boolean)">
+            <summary>
+            Output the HTML to render a node and optionally fill in its children.
+            </summary>
+            <param name="writer"></param>
+            <param name="treeID"></param>
+            <param name="delayLoad"></param>
+        </member>
+        <member name="P:TreeNode.ID">
+            <summary>
+            Unique identifier for this node
+            </summary>
+        </member>
+        <member name="P:TreeNode.IdNode">
+            <summary>
+            Unique identifier for this node
+            </summary>
+        </member>
+        <member name="P:TreeNode.ParentNode">
+            <summary>
+            Unique identifier for this node
+            </summary>
+        </member>
+        <member name="P:TreeNode.Text">
+            <summary>
+            The text to present on the tree node
+            </summary>
+        </member>
+        <member name="P:TreeNode.Url">
+            <summary>
+            URL to link to from tree node
+            </summary>
+        </member>
+        <member name="P:TreeNode.NavigateUrl">
+            <summary>
+            URL to link to from tree node
+            </summary>
+        </member>
+        <member name="P:TreeNode.ImageClosed">
+            <summary>
+            Index of the image to show for the node
+            </summary>
+        </member>
+        <member name="P:TreeNode.ImageOpen">
+            <summary>
+            Image index to show when node is open
+            </summary>
+        </member>
+        <member name="P:TreeNode.SelectAction">
+            <summary>
+            Azione
+            </summary>
+        </member>
+        <member name="P:TreeNode.ToolTip">
+            <summary>
+            ToolTip -- Aggiunto per compatibilità ma non funzionante
+            </summary>
+        </member>
+        <member name="P:TreeNode.Value">
+            <summary>
+            Value -- Aggiunto per compatibilità ma non funzionante
+            </summary>
+        </member>
+        <member name="P:TreeNode.ImageUrl">
+            <summary>
+            ImageUrl -- Aggiunto per compatibilità
+            </summary>
+        </member>
+        <member name="P:TreeNode.Children">
+            <summary>
+            A list of children of this node.
+            </summary>
+        </member>
+        <member name="P:TreeNode.ChildNodes">
+            <summary>
+            A list of children of this node.
+            </summary>
+        </member>
+        <member name="P:TreeNode.Expanded">
+            <summary>
+            Show the node as expanded or not.
+            This does not reflect the runtime state of the tree, only the initial render
+            state.
+            </summary>
+        </member>
+        <member name="T:MainSecurity.User">
+            <summary>
+            Classe che rappresenta l'utente generico meridiana
+            </summary>
+        </member>
+        <member name="M:MainSecurity.User.#ctor">
+            <summary>
+            Costruttore di default
+            </summary>
+        </member>
+        <member name="M:MainSecurity.User.updateLoginDate(System.String)">
+            <summary>
+            Aggiorna le informazioni presenti sul db sull'ultimo accesso effetuato
+            </summary>
+            <param name="Login">Nome dell'utente</param>
+        </member>
+        <member name="M:MainSecurity.User.insertUser(System.String,System.String,System.Int32,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.Int32)">
+            <summary>
+            Inserisce un utente
+            </summary>
+            <param name="Login">Login utente</param>
+            <param name="Password">Password</param>
+            <param name="Empl">Numero di matricola</param>
+            <param name="Name">Nome</param>
+            <param name="Surname">Cognome</param>
+            <param name="Start_Date">Data di inizio validità dell'account</param>
+            <param name="End_Date">Data di fine validità dell'account</param>
+            <param name="Email">Indirizzo di posta elettronica</param>
+            <param name="Telex">Telex</param>
+            <param name="Uid">Id dell'amministratore che effetua l'inserimento</param>
+        </member>
+        <member name="M:MainSecurity.User.getUsers(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Restituisce tutti gli utenti con i paramatri richiesti
+            </summary>
+        </member>
+        <member name="M:MainSecurity.User.updateUser(System.String,System.String,System.Int32,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.Boolean,System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Aggiorna le caratteristiche dell'utente
+            </summary>
+            <param name="login">Stringa di login dell'utente</param>
+            <param name="password">Password di login dell'utente</param>
+            <param name="empl">Numero di matricola</param>
+            <param name="name">Nome</param>
+            <param name="surname">Cognome</param>
+            <param name="start_Date">Data di validità dell'account</param>
+            <param name="end_Date">Fine data di validità</param>
+            <param name="email">E-mail</param>
+            <param name="telex">Indirizzo telex</param>
+            <param name="fl_superuser">Utente amministratore</param>
+            <param name="pwd_validity">Validità della password</param>
+            <param name="last_user_login">Ultimo accesso</param>
+            <param name="last_pwd_changed">Ultimo cambio password</param>
+            <param name="uid">Id utente inserimento/ultima modifica</param>
+            <param name="dt_ins">Data inserimento</param>
+            <param name="dt_update">Data modifica</param>
+            <returns>Numero di righe modificate</returns>
+        </member>
+        <member name="M:MainSecurity.User.deleteUser(System.Int32)">
+            <summary>
+            Dato un numero di matricola, elimina un utente dal database
+            </summary>
+            <param name="Empl">Numero di matricola</param>
+        </member>
+        <member name="M:MainSecurity.User.getUserByDataset(System.Data.DataSet)">
+            <summary>
+            Dato un dataset restituisce l'oggetto User in esso contentuto
+            </summary>
+            <param name="ds">dataset da cui ricavare le informazioni</param>
+            <returns>oggetto User se presente nel reader, altrimenti null</returns>
+        </member>
+        <member name="M:MainSecurity.User.UpdateSecUser_Crypt(System.Int32,System.String)">
+            <summary>
+            Dato uno username, restituisce l'account correntemente valido per un utente
+            </summary>
+            <param name="Login">Username utilizzato per l'accesso</param>
+            <returns>Oggetto che rappresenta l'account dell'utente</returns>
+        </member>
+        <member name="M:MainSecurity.User.Get_Email_Password(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.User_Email(System.Int32)">
+            <summary>
+            in base al numero di matricola verifico se appartiene al gruppop di amministrazione e-mail
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.Admin_Email(System.Int32)">
+            <summary>
+            in base al numero di matricola verifico se appartiene al gruppop di amministrazione e-mail
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.GetUserBriefiWeb(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.GetCategoryIDElio(System.Int32)">
+            <summary>
+            se l'empl corrisponde ad uno scalo recupero da Sec_Field gli Scali associati
+            </summary>
+            <param name="Empl">Empl</param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.LogDocOpen(System.String,System.String,System.String)">
+            <summary>
+            restituisce l'elenco di di id_group di appartenenza
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.GetGroupsID(System.Int32)">
+            <summary>
+            restituisce l'elenco di di id_group di appartenenza
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.GetGroupIDElio(System.Int32)">
+            <summary>
+            recupero i gruppi i acui appartine l'utente
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.UpdateLastAccess(MainSecurity.User)">
+            <summary>
+            Aggioro il campo di ultimo accesso ad applicazioni WEB
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.CheckPassword_Mail(MainSecurity.User)">
+            <summary>
+            
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.getApplicationHightPriority(MainSecurity.User)">
+            <summary>
+            dato l'utente, restituisce la pagina di Default relativa all'applicazione con 
+            priorità più alta tra quelle a cui è abilitato
+            </summary>
+            <returns>Oggetto che rappresenta l'account dell'utente</returns>
+        </member>
+        <member name="M:MainSecurity.User.GetGroupsForUser(System.String)">
+            <summary>
+            Dato un numero di matricola, restituisce l'account per un utente
+            </summary>
+            <param name="Empl">numero di matricola</param>
+            <param name="connString">Stringa di connessione da utilizzare per il recupero dell'account</param>
+            <returns>Oggetto che rappresenta l'account dell'utente</returns>
+        </member>
+        <member name="M:MainSecurity.User.GetCompanyUserNotMeridiana(System.Int32)">
+            <summary>
+            Recupera L'Azienda  Per l'utente non Meridiana
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.GetLoginUserNotMeridiana(System.Int32)">
+            <summary>
+            Recupera la Login Per l'utente non Meridiana
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.SaveNewSessionID(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="HostAdress"></param>
+            <param name="SessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.IsNewSessionID(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="HostAdress"></param>
+            <param name="SessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.GetMessages(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Empl"></param>
+            <param name="Mode">1 solo messaggi operartivi, 2 Admin quindi tutto,3 tutto tranne operativo</param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.GetMyAdmins(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Empl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.getUser(System.Int32,System.String)">
+            <summary>
+            Dato un numero di matricola, restituisce l'account per un utente
+            </summary>
+            <param name="Empl">numero di matricola</param>
+            <param name="connString">Stringa di connessione da utilizzare per il recupero dell'account</param>
+            <returns>Oggetto che rappresenta l'account dell'utente</returns>
+        </member>
+        <member name="M:MainSecurity.User.RestorePassword(System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Empl"></param>
+            <param name="Email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MainSecurity.User.UpdatePassword(System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Update dell Password
+            </summary>
+        </member>
+        <member name="M:MainSecurity.User.GetNodesForUserDefault(MainSecurity.User)">
+            <summary>
+            Restituisce l'albero delle applicazioni in base ai permessi di un utente
+            </summary>
+            <param name="u">Utente</param>
+            <returns>Albero visibile per l'utente</returns>
+        </member>
+        <member name="M:MainSecurity.User.GetNodesForUser(MainSecurity.User)">
+            <summary>
+            Restituisce l'albero delle applicazioni in base ai permessi di un utente
+            </summary>
+            <param name="u">Utente</param>
+            <returns>Albero visibile per l'utente</returns>
+        </member>
+        <member name="M:MainSecurity.User.GetNodesForAdmin(System.Collections.SortedList@,System.Int32,System.Boolean)">
+            <summary>
+            Restituisce l'albero delle applicazioni visibili ad un amministratore
+            </summary>
+            <param name="Nodes">Albero visibile all'amministratore</param>
+            <param name="empl">Numero di matricola per l'amministratore</param>
+            <param name="bLeaf">Indica se visualizzare o meno le foglie</param>
+            <returns>Id nodo massimo presente sul db</returns>
+        </member>
+        <member name="M:MainSecurity.User.getFormPermission(System.String)">
+            <summary>
+            Restituisce i permessi relativi alla pagina corrente
+            </summary>
+            <param name="requestFormPath">Pagina corrente</param>
+            <returns>stringa contenente i permessi</returns>
+        </member>
+        <member name="P:MainSecurity.User.LoginIGWEB">
+            <summary>
+            Login per accesso ad IGWEB
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.ID_Company">
+            <summary>
+            ID_Company per accesso ad IGWEB
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Cod_fisc">
+            <summary>
+            Data di Nascita 
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Company">
+            <summary>
+            Company di Appartenenza
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.User_EmailTiscali">
+            <summary>
+            Company di Appartenenza
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.EnableEmail">
+            <summary>
+            Company di Appartenenza
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Password_EmailTiscali">
+            <summary>
+            Company di Appartenenza
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Login">
+            <summary>
+            Username utilizzata per l'autenticazione
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Password">
+            <summary>
+            Password utilizzata per l'autenticazione
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Empl">
+            <summary>
+            Numero di matricola
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Name">
+            <summary>
+            Nome
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Surname">
+            <summary>
+            Cognome
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Start_Date">
+            <summary>
+            Data di validità dell'account
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.End_Date">
+            <summary>
+            Data di scadenza dell'account
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Id_Center">
+            <summary>
+            Id del centro di appartenenza
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Telex">
+            <summary>
+            Telex
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Is_SuperUser">
+            <summary>
+            Indica se l'utente è un amministratore globale
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Pwd_Validity">
+            <summary>
+            Validità della password in giorni
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Last_User_Login">
+            <summary>
+            Data dell'ultimo accesso effetuato
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Email">
+            <summary>
+            E-mail
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.Last_Password_Changed_Date">
+            <summary>
+            Data relativa all'ultima modifica della password
+            </summary>
+        </member>
+        <member name="P:MainSecurity.User.IsValid">
+            <summary>
+            Indica se l'account relativo all utente recuperato �valido.
+            </summary>
+        </member>
+    </members>
+</doc>
