@@ -26,5 +26,6 @@ namespace RinascitaWeb.Entity
         }
     
         public DbSet<TB_users> TB_users { get; set; }
+        public DbSet<TB_pagesecurity> TB_pagesecurity { get; set; }
     }
 }

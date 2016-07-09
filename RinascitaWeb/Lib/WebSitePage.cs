@@ -11,6 +11,8 @@ using System.Configuration;
 
 using log4net;
 using RinascitaWeb.Entity;
+//
+using RinascitaWeb.BE;
 
 namespace Rinascita.LIB
 {
@@ -113,8 +115,15 @@ namespace Rinascita.LIB
         {
             try
             {
+
+                dataHelper db = new dataHelper();
+
+                TB_pagesecurity[] pages = db.pagesEnable();
+
                 string pagename = System.IO.Path.GetFileName(Request.PhysicalPath);
                 string ds_group = string.Empty;
+
+
 
 
 
@@ -138,7 +147,16 @@ namespace Rinascita.LIB
 
                 if (ds_group != "")
                 {
-                    return true;
+
+                    foreach(TB_pagesecurity p in pages)
+                    {
+
+                        if (p.pagename == pagename)
+                            return true;
+                    }
+
+
+                    return false;
                     //implementare abilitazione per singola pagina
                 }
                 else

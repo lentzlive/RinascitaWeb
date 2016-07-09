@@ -37,14 +37,14 @@
         <div class="container">
 
             <form  id="formLogin" class="form-login" runat="server">
-                <h2 class="form-login-heading">sign in now</h2>
+                <h2 class="form-login-heading">Condominio Rinascita</h2>
                 <div class="login-wrap">
             
                        <asp:TextBox ID="txtUser"  CssClass="form-control" placeholder="User ID" runat="server"></asp:TextBox>
 
                     <br/>
                   
-                    <asp:TextBox ID="txtPassword"  CssClass="form-control" placeholder="Password" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword"   TextMode="Password" CssClass="form-control" placeholder="Password" runat="server"></asp:TextBox>
                     <label class="checkbox">
                         <span class="pull-right">
                             <a data-toggle="modal" href="login.html#myModal">Forgot Password?</a>

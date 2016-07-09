@@ -4,7 +4,20 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'appwebesql-group-db.dbo.TB_pagesecurity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TB_pagesecurity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LevelGroup" Type="varchar" MaxLength="10" />
+          <Property Name="pagename" Type="varchar" MaxLength="250" />
+          <Property Name="Action" Type="varchar" MaxLength="100" />
+          <Property Name="DT_INS" Type="datetime" />
+          <Property Name="DT_UPD" Type="datetime" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'appwebesql-group-db.dbo.TB_users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TB_users">
@@ -27,6 +40,16 @@ warning 6002: The table/view 'appwebesql-group-db.dbo.TB_users' does not have a 
           <Property Name="phone" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="TB_pagesecurity" EntityType="Self.TB_pagesecurity" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TB_pagesecurity].[Id] AS [Id], 
+[TB_pagesecurity].[LevelGroup] AS [LevelGroup], 
+[TB_pagesecurity].[pagename] AS [pagename], 
+[TB_pagesecurity].[Action] AS [Action], 
+[TB_pagesecurity].[DT_INS] AS [DT_INS], 
+[TB_pagesecurity].[DT_UPD] AS [DT_UPD]
+FROM [dbo].[TB_pagesecurity] AS [TB_pagesecurity]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="TB_users" EntityType="Self.TB_users" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [TB_users].[Id] AS [Id], 
@@ -46,8 +69,7 @@ warning 6002: The table/view 'appwebesql-group-db.dbo.TB_users' does not have a 
 FROM [dbo].[TB_users] AS [TB_users]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -72,7 +94,19 @@ FROM [dbo].[TB_users] AS [TB_users]</DefiningQuery>
         </EntityType>
         <EntityContainer Name="EntitiesRinascita" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TB_users" EntityType="Self.TB_users" />
+          <EntitySet Name="TB_pagesecurity" EntityType="Model.TB_pagesecurity" />
         </EntityContainer>
+        <EntityType Name="TB_pagesecurity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LevelGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="pagename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Action" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DT_INS" Type="DateTime" Precision="3" />
+          <Property Name="DT_UPD" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -96,6 +130,18 @@ FROM [dbo].[TB_users] AS [TB_users]</DefiningQuery>
                 <ScalarProperty Name="note" ColumnName="note" />
                 <ScalarProperty Name="mobile" ColumnName="mobile" />
                 <ScalarProperty Name="phone" ColumnName="phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_pagesecurity">
+            <EntityTypeMapping TypeName="Model.TB_pagesecurity">
+              <MappingFragment StoreEntitySet="TB_pagesecurity">
+                <ScalarProperty Name="DT_UPD" ColumnName="DT_UPD" />
+                <ScalarProperty Name="DT_INS" ColumnName="DT_INS" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="pagename" ColumnName="pagename" />
+                <ScalarProperty Name="LevelGroup" ColumnName="LevelGroup" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

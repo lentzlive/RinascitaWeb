@@ -82,6 +82,8 @@
     <Content Include="assets\img\Background-Vector.jpg" />
     <Content Include="assets\img\blog-bg.jpg" />
     <Content Include="assets\img\checkbox-gray.png" />
+    <Content Include="assets\img\DucatiLogo.jpg" />
+    <Content Include="assets\img\DucatiLogo2.png" />
     <Content Include="assets\img\instagram.jpg" />
     <Content Include="assets\img\login-bg.jpg" />
     <Content Include="assets\img\lorde.jpg" />
@@ -176,6 +178,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelRinascita.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TB_pagesecurity.cs">
+      <DependentUpon>ModelRinascita.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TB_users.cs">
       <DependentUpon>ModelRinascita.tt</DependentUpon>
     </Compile>
@@ -223,6 +228,8 @@
       <DependentUpon>ModelRinascita.edmx</DependentUpon>
     </Content>
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\lentzlive - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\MyTelemetryAzureProfileFE.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

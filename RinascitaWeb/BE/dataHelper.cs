@@ -38,5 +38,25 @@ namespace RinascitaWeb.BE
         }
 
 
+        public TB_pagesecurity[] pagesEnable()
+        {
+            try
+            {
+                Entity.EntitiesRinascita context = new EntitiesRinascita();
+                var page = (from p in context.TB_pagesecurity
+                                 select p).ToArray();
+
+                if (page.Length == 1)
+                    return page;
+                else
+                    return null;
+            }
+            catch (Exception exc)
+            {
+                return null;
+            }
+
+        }
+
     }
 }
